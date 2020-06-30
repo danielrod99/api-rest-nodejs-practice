@@ -13,6 +13,7 @@ router.get('/projects',projectController.getAllProjects);
 router.put('/update/:id',projectController.updateProject);
 router.delete('/delete/:id',projectController.deleteProject);
 router.post('/upload-image/:id',multipartMiddleware,projectController.uploadImage);
+router.get('/get-image/:image',projectController.getImageFile);
 router.get('**',(req,res)=>{
     res.send('error loco');
 })
